@@ -68,7 +68,7 @@ components:
     data_bindings:
     - {property: text, code: 'self.item[''content'']'}
   - type: Spacer
-    properties: {height: 32}
+    properties: {height: 235.8984375}
     name: spacer_2
     layout_properties: {grid_position: 'MHWRRD,UGUKIZ'}
 is_package: true

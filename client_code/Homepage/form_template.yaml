@@ -8,6 +8,10 @@ components:
   name: content_panel
   layout_properties: {slot: default}
   components:
+  - name: test_box1
+    properties: {}
+    type: TextBox
+    layout_properties: {grid_position: 'ZVKHER,SVNQCV'}
   - type: Button
     properties: {role: filled-button, align: center, tooltip: '', border: '', enabled: true,
       foreground: '', visible: true, text: 'Add an Entry
@@ -17,12 +21,31 @@ components:
     name: add_entry_button
     layout_properties: {grid_position: 'CBFHGL,NKFPMX'}
     event_bindings: {click: add_entry_button_click}
+  - name: button_2
+    properties: {text: button_2, icon: 'fa:angle-double-right', visible: true, enabled: true,
+      underline: false}
+    type: Button
+    layout_properties: {grid_position: 'KXKAFE,CMAQXI', full_width_row: false}
+  - name: file_loader_1
+    properties: {}
+    type: FileLoader
+    layout_properties: {grid_position: 'IEUGNG,ASLLCH'}
+  - name: button_1
+    properties: {text: button_1}
+    type: Button
+    layout_properties: {grid_position: 'WZYRYG,PIVGTX'}
   - type: RepeatingPanel
     properties: {role: null, tooltip: '', border: '', foreground: '', items: null,
       visible: true, spacing_above: small, spacing_below: small, item_template: EntryView,
       background: ''}
     name: entries_panel
     layout_properties: {slot: title, grid_position: 'XRGDXR,JQCHKL'}
+  - name: youtube_video_1
+    properties: {autoplay: true, youtube_id: '"UEsSL3Wdcfc"'}
+    type: YouTubeVideo
+    layout_properties: {grid_position: 'BPBSJR,FLXNZT'}
+    data_bindings:
+    - {property: youtube_id, code: 'self.item[''UEsSL3Wdcfc'']', writeback: false}
 - type: FlowPanel
   properties: {}
   name: navbar_links
